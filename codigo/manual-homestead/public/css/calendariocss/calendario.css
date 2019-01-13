@@ -1,0 +1,170 @@
+.Fyear th
+{
+	text-align: center;
+}
+
+.Fyear td
+{
+	border: solid 1px black;
+	width: 1rem;
+	height: 1rem;
+
+}
+
+
+
+.Fyear
+{
+	padding-left:  8%;
+
+}
+
+.Syear
+{
+	padding-left:  8%;
+	margin-bottom: 2rem;
+
+}
+
+.Syear th
+{
+	text-align: center;
+}
+
+.Syear td
+{
+	border: solid 1px black;
+	width: 1rem;
+	height: 1rem;
+}
+
+#dweek
+{
+	text-align: center;
+}
+
+.agosto 
+{
+	display: inline-block;
+}
+
+.septiembre 
+{
+	display: inline-block;
+}
+
+.octubre 
+{
+	display: inline-block;
+}
+
+.noviembre 
+{
+	display: inline-block;
+}
+
+.diciembre
+{
+	display: inline-block;
+}
+
+.enero
+{
+	display: inline-block;
+}
+
+.febrero
+{
+	display: inline-block;
+}
+
+
+.marzo
+{
+	display: inline-block;
+}
+
+.abril
+{
+	display: inline-block;
+}
+
+.mayo
+{
+	display: inline-block;
+}
+
+.junio
+{
+	display: inline-block;
+}
+
+.julio
+{
+	display: inline-block;
+}
+
+.agostos
+{
+	display: inline-block;	
+}
+
+.Fyear table
+{
+     cursor:pointer;
+}
+
+.Syear table
+{
+     cursor:pointer;
+}
+
+
+.mes_grande th
+{
+	text-align: center;
+	font-size: 28px;
+}
+
+.mes_grande td
+{
+	border: solid 1px black;
+	width: 6rem;
+
+	
+
+
+}
+
+.mes_grande 
+{
+	padding-left:  4%;
+	margin-bottom: 2rem;
+	text-align: center;
+
+}
+
+
+.mes_grande #week1, .mes_grande #week2, .mes_grande #week3, .mes_grande #week4
+{
+	font-size: 13px;
+
+}
+
+a 
+{
+	text-decoration:none;
+
+}
+
+.mes_grande #week1, .mes_grande #week2, .mes_grande #week3, .mes_grande #week4, .mes_grande #week5
+{
+     cursor:pointer;
+     height: 6rem;
+}
+
+#gran_mes
+{
+	 cursor:pointer;
+}
+

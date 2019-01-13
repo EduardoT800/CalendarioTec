@@ -1,0 +1,98 @@
+body
+{
+	padding: 2rem;
+}
+
+ input
+ {
+ 	width: 20%;
+ 	margin-bottom: 20px;
+ 	padding: 7px;
+ 	box-sizing: border-box;
+
+
+ }
+
+ textarea
+ {
+ 	width: 70%;
+ 	margin-bottom: 20px;
+ 	padding: 7px;
+ 	box-sizing: border-box;
+ }
+
+table, th, td 
+{
+    border: 1px solid black;
+}
+
+#rojo
+{
+	padding: 5rem;
+	background-color: red;
+}
+
+#verde
+{
+	padding: 5rem;
+	background-color: green;
+}
+
+#azul
+{
+	padding: 5rem;
+	background-color: blue;
+}
+
+#naranja
+{
+	padding: 5rem;
+	background-color: orange;
+}
+
+#withe
+{
+	padding: 5rem;
+	background-color: yellow;
+}
+
+.numeros
+{
+	float: left;
+}
+
+.primos
+{
+	margin-left: 30rem;
+}
+
+.colores
+{
+	margin-top: 6rem;
+}
+
+#moneda
+{
+	float: left;
+	margin-right:  2rem;
+}
+
+#convertido
+{
+	width: 30%;
+	height: 2rem;
+	resize: none;
+	
+}
+
+#calc
+{
+	float: right;
+
+}
+
+#clear
+{
+	float: right;
+	margin-left:  1rem;
+}

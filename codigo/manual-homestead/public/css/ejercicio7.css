@@ -1,0 +1,75 @@
+body
+{
+	padding: 1rem;
+	font-family: arial;
+	font-size: 20px;
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+
+}
+
+th, td
+{
+	padding: 0.5rem;
+}
+
+#impo
+{
+	width: 21%;
+}
+
+#desc
+{
+	width: 66%;
+}
+
+#colado
+{
+	width: 68.5%;
+}
+
+#escribit
+{
+	width: 80%;
+
+}
+
+
+#escribit1
+{
+	font-weight: normal;
+
+}
+
+#escribit1, #escribit, #escribit2
+{
+	border: none;
+	font-size: 14px;
+}
+
+
+
+#new1
+{
+	width: 5rem;
+}
+
+#new2
+{
+	width: 30rem;
+}
+
+#new3
+{
+	width: 8.7rem;
+}
+
+#escribit3
+{
+	width: 100%;
+	font-size: 14px;
+	border: none;
+}

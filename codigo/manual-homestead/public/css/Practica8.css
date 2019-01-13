@@ -1,0 +1,27 @@
+body
+{
+	padding: 1rem;
+	padding-left: 5rem;
+}
+
+#mostrar, #imgAdd, #imgQuit, #guardar
+{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#salir
+{
+	margin-left: 10rem;
+}
+
+h2
+{
+	font-family: arial;
+}
+
+#revista, #numero, #tipo, #fecha, #imagen
+{
+	width: 90%;
+	font-size: 18px;
+}

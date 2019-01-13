@@ -1,0 +1,134 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    background-color: #288c10;
+    font-family: arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo
+{
+    width: 15%;
+    max-width: 1000px;
+    margin: auto;
+    float: left;
+}
+
+.namepage
+{
+    float: left;
+    padding-top: 2rem;
+    margin-left: 18rem;
+}
+
+nav
+{
+
+    font-family: helvetica;
+    text-align: center;
+}
+
+.menu
+{
+    background-color: black;
+}
+
+.menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu ul li
+
+{
+
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.menu ul li a
+{
+    color: white;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    border-right:  1px solid white;
+}
+
+.menu ul li a:hover
+{
+    background-color: #42B881;
+    
+}
+
+aside
+{
+    font-family: helvetica;
+    height: 100%;
+
+}
+
+.submenu
+{
+    width: 7%;
+    height: 100%;
+    position: fixed;
+}
+
+.submenu ul
+{
+    list-style: none;
+}
+
+.submenu ul li
+{
+    
+    font-size: 18px;
+    background-color: grey;
+    width: 80%;
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    -webkit-transition: padding-left 0.6s; 
+    
+}
+
+.submenu ul a
+{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.submenu ul li:hover
+{
+    width: 100%;
+    background-color: darkgrey;
+    border:3px solid black;
+    border-radius: 0px 45px 45px 0px;
+
+}
+
+.contenido
+{
+    padding: 1em;
+    margin-left: 9rem;
+    margin-top: 1rem;
+    margin-right:  5%;
+}

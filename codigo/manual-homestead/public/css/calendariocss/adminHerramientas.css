@@ -1,0 +1,112 @@
+.herramientas
+{
+	font-family: arial;
+	font-size: 20px;
+}
+
+
+#cEscolarN
+{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	width: 9rem;
+
+}
+
+
+#cicloTable
+{
+	padding: 1rem;
+}
+
+#changeDate
+{
+	margin: 1rem;
+	font-weight: bold;
+	font-size: 20px;
+	width: 90%;
+}
+
+#mas
+{
+	font-weight: bold;
+	font-size: 18px;
+
+	color: green;
+}
+
+#menos
+{
+	font-weight: bold;
+	font-size: 18px;
+	color: red;
+}
+
+#listaTool
+{
+	padding: 1rem;
+}
+
+.dia_rango
+{
+	padding: 1rem;
+}
+
+.mesTool
+{
+	padding: 1rem;	
+}
+
+#option
+{
+	width: 100%;
+	font-size: 16px;
+}
+
+.salvado
+{
+	padding: 1rem;
+
+
+}
+
+#cargar
+{
+	width: 100%;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#guardar
+{
+	width: 100%;
+	font-weight: bold;
+	font-size: 18px;
+
+
+}
+
+#publicar
+{
+	width: 100%;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#clearN, #clearP, #clear
+{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.limpieza
+{
+	padding: 1rem;
+}
+
+#mesCheck
+{
+	font-weight: bold;
+	font-size: 16px;
+}

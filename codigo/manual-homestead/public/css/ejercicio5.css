@@ -1,0 +1,77 @@
+table, th, td 
+{
+    border: 1px solid black;
+}
+
+#color1
+{
+	padding: 5rem;
+	background-color: #82342A;
+}
+
+#color2
+{
+	padding: 5rem;
+	background-color: #353C50;
+}
+
+#color3
+{
+	padding: 5rem;
+	background-color: #3E4E4D;
+}
+
+#color4
+{
+	padding: 5rem;
+	background-color: #3E4B2D;
+}
+
+#color5
+{
+	padding: 5rem;
+	background-color: #BFB9A1;
+}
+
+
+#color6
+{
+	padding: 5rem;
+	background-color: #9F9536;
+}
+
+#color7
+{
+	padding: 5rem;
+	background-color: #AEA68D;
+}
+
+#color8
+{
+	padding: 5rem;
+	background-color: #6E7F98;
+}
+
+#color9
+{
+	padding: 5rem;
+	background-color: #AC9FA9;
+}
+
+#color10
+{
+	padding: 5rem;
+	background-color: #4E3A37;
+}
+
+#color11
+{
+	padding: 5rem;
+	background-color: #758F71;
+}
+
+#color12
+{
+	padding: 5rem;
+	background-color: #497169;
+}

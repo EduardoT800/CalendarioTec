@@ -1,0 +1,31 @@
+
+.timagenes
+{
+	
+	text-align: center;
+	overflow-x:auto;
+
+	width: 100%;
+	
+	margin: 0 auto;
+
+
+}
+
+img 
+{
+width: 100%;
+height: auto;
+max-width: 135px;
+}
+
+table, th, td 
+{
+
+    border: 1px solid black;
+}
+
+.stok
+{
+	padding: 200000rem;
+}

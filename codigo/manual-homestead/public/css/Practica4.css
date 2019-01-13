@@ -1,0 +1,204 @@
+*
+{
+    margin: auto;
+    padding: 0;
+}
+
+
+
+header
+{
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    background-color: #0822AA;
+    font-family: arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav
+{
+
+    font-family: helvetica;
+    text-align: center;
+}
+
+.menu
+{
+    background-color: black;
+}
+
+.menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu ul li
+
+{
+
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.menu ul li a
+{
+    color: white;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    border-right:  1px solid white;
+}
+
+.menu ul li a:hover
+{
+    background-color: #42B881;
+    
+}
+
+aside
+{
+
+	
+	float: right;
+	margin-right: 2rem;
+
+
+
+}
+
+#navegacion
+{
+	background-color: black;
+}
+
+#navegacion ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navegacion ul li
+
+{
+
+	display: block;
+}
+
+#navegacion ul li a
+{
+	color: white;
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+
+#navegacion ul li a:hover
+{
+	background-color: #42B881;
+	
+}
+
+
+
+.texto
+{
+	margin-left: 2%;
+	margin-right: 18%;
+	border: 1px solid black;
+	text-align: justify;
+	padding: 1rem;
+
+}
+
+
+.conteiner1
+{
+	margin-top: 1rem;
+	font-family: helvetica;
+
+
+
+}
+
+.conteiner2
+{
+	margin-top: 1rem;
+	font-family: verdana;
+	margin-right: 18%;
+
+
+
+}
+
+.tabla
+{
+	margin-left: 2rem;
+	margin-top: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	
+
+	float: left;
+
+}
+
+td
+{
+	padding: 1rem;
+
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+}
+
+.encuesta
+{
+	float: right;
+	
+	margin-top: 2reM;
+
+}
+
+
+
+#b
+{
+	
+	width: 10rem;
+	height: 10rem;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#titulo
+{
+	border: none;
+	width: 100%;
+	
+}
+
+
+table#titulo th
+{
+	border: none;
+}
+
+#imagen
+{
+	text-align: right;
+}

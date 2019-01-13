@@ -1,0 +1,48 @@
+
+table, th, td 
+{
+
+    border: 1px solid black;
+}
+
+table
+
+{
+	text-align: center;
+	margin: 2rem;
+}
+
+th, td 
+{
+	padding: 1rem;
+}
+
+#filtro
+{
+	margin-left: 2rem;
+}
+
+.stok
+{
+	
+	float: left;
+}
+
+.control
+{
+	float: right;
+	margin-right: 30rem;
+	margin-top: 2rem;
+	height: 30rem;
+}
+
+#cant0, #cant1, #cant2, #cant3, #totalP, #totalC, #tgraf, #tmonf, #tra  
+{
+	border: none;
+	text-align: center;
+	resize: none;
+	width: 50%
+	height: 100%;
+
+
+}

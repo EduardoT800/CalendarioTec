@@ -1,0 +1,102 @@
+p
+{
+
+font-family: arial;
+text-align:justify;
+}
+
+
+.texto
+{
+
+	
+	border: 1px solid black;
+	text-align: justify;
+	padding: 1rem;
+
+}
+
+
+#menu
+{
+	background-color: black;
+}
+
+#menu ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+}
+
+#menu ul li
+
+{
+
+	display: inline-block;
+	flex-grow: 1;
+}
+
+#menu ul li a
+{
+	color: white;
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
+	border-right:  1px solid white;
+}
+
+#menu ul li a:hover
+{
+	background-color: #42B881;
+	
+}
+
+
+h1
+{
+color:blue;
+font-family:"algerian";
+text-align:center;
+}
+
+h2
+{
+color:green;
+font-family: "Verdana", "Geneva", "sans-serif";
+text-align:center;
+
+}
+
+
+h3{
+color:#CC6;
+boder-color:#0F6;
+font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+h4{
+color:#0F6;
+}
+
+h5{
+
+color:#0CF;
+font-family: "Verdana", "Geneva", "sans-serif";
+}
+h6{
+color:red;
+text-align: center;
+
+font-family:"Arial Black", "Gadget", "sans-serif";
+}
+
+tfoot
+{
+	font-family: helvetica;
+	margin-bottom: 0;
+	padding: 0;
+	color: purple;
+}

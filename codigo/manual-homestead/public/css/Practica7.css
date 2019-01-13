@@ -1,0 +1,66 @@
+body
+{
+	padding: 2rem;
+}
+
+table, td,th
+{
+	border: 1px solid black;
+	margin-bottom: 1rem;
+	text-align: center;
+	
+}
+
+td, th
+{
+	padding: 1rem;
+}
+
+#tx
+{
+	padding-left: 3rem;
+	text-align: right;
+	background-color: lightgrey;
+}
+
+#user, #pass
+{
+	margin-right: 6rem;
+}
+
+#login
+{
+	width: 50%;
+	height: 50%;
+}
+
+.teclado
+{
+	padding-left: 7rem;
+}
+
+#numb1, #numb0, #numb2, #numb3, #numb4, #numb5, #numb6, #numb7, #numb8, #numb9, #numb 
+{
+	padding: 1rem;
+	margin: 0.2rem;
+}
+
+#numba
+{
+	padding: 1rem;
+	padding-right: 0.5rem;
+	
+}
+
+#numbb
+{
+	padding: 1rem;
+	padding-right: 0.5rem;
+	margin: 0.2rem;
+}
+
+#resultado
+{
+	width: 90%;
+
+}

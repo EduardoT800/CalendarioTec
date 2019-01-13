@@ -1,0 +1,54 @@
+*
+{
+	margin: auto;
+}
+.formulario
+{
+	padding-top: 2rem;
+}
+
+form#formu
+{
+	width: 40rem;
+	margin: auto;
+	padding: 2rem;
+	box-sizing: border-box;
+	border-radius: 7px;
+	border: 1px solid black;
+}
+ 
+ h2#enc
+ {
+ 	text-align: center;
+ 	font-family: arial;
+ 	font-size: 30px;
+ 	margin-bottom: 1rem;
+ }
+
+ input, textarea
+ {
+ 	width: 100%;
+ 	margin-bottom: 20px;
+ 	padding: 7px;
+ 	box-sizing: border-box;
+
+
+ }
+
+ textarea
+ {
+ 	font-size: 18px;
+ 	height: 140px;
+ 	min-height: 100px;
+ 	max-height: 200px;
+ 	max-width: 100%;
+ 	min-width: 100%
+ }
+
+ @media (max-width: 480px)
+ {
+ 	form
+ 	{
+ 		width: 100%;
+ 	}
+ }
