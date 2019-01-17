@@ -18,7 +18,8 @@ $(document).ready(function(){
 				{
 					$('.Fyear td').css({ 'width':'1rem', 'height':'1rem' });
 					$('.Fyear').css({ 'margin-bottom': '0rem',  });	
-					$("#firstyear").val("2018");
+          // $("#firstyear").val("2018");
+          $('#firstyear').text(document.querySelector('#firstyear').dataset.year);
 					visiblef = false;
 					presionado = true;
 				}
@@ -26,8 +27,9 @@ $(document).ready(function(){
 				else 
 				{ 
 					 $('.Fyear td').css({ 'width':'1.5rem', 'height':'1.8rem',  });
-					 $('.Fyear').css({ 'margin-bottom': '10rem',  });
-					 $("#firstyear").val("2018-2019");
+           $('.Fyear').css({ 'margin-bottom': '10rem',  });
+           var years = document.querySelector('#firstyear').dataset.year+'-'+document.querySelector('#secondyear').dataset.year;
+					 $("#firstyear").text(years);
 						 
 					visiblef = true;
 					presionado = false;
@@ -44,15 +46,16 @@ $(document).ready(function(){
 				{
 					$('.Syear td').css({ 'width':'1rem', 'height':'1rem' });
 					$('.Syear').css({ 'margin-bottom': '2rem',  });	
-					$("#secondyear").val("2019");
+					$("#secondyear").text(document.querySelector('#secondyear').dataset.year);
 					visiblef = false;
-					presionado = false
+					presionado = false;
 				}
 
 				else 
 				{ 
-					$('.Syear td').css({ 'width':'1.5rem', 'height':'1.8rem',  });
-					$("#secondyear").val("2018-2019");	 
+          $('.Syear td').css({ 'width':'1.5rem', 'height':'1.8rem',  });
+          var years = document.querySelector('#firstyear').dataset.year+'-'+document.querySelector('#secondyear').dataset.year;
+					$("#secondyear").text(years);	 
 					visiblef = true;
 					presionado = true;
 				}

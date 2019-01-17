@@ -174,3 +174,13 @@ a
      height: 8rem;
 }
 
+.btn-group {
+  display: flex;
+}
+
+.btn-group input {
+  width: 49% !important;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 20px;
+}

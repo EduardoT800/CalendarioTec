@@ -8,7 +8,8 @@
 	 <link href="css\calendariocss\adminmaster.css" rel="stylesheet" type="text/css">
 	 <link href="css\calendariocss\adminContenedor.css" rel="stylesheet" type="text/css">
 	 <link href="css\calendariocss\adminHerramientas.css" rel="stylesheet" type="text/css">
-	 <link href="css\calendariocss\calendarioAdmin.css" rel="stylesheet" type="text/css">
+   <link href="css\calendariocss\calendarioAdmin.css" rel="stylesheet" type="text/css">
+   <!-- <link href="{{asset('css\app.css')}}" rel="stylesheet" type="text/css"> -->
 
 	 
 	
@@ -22,11 +23,11 @@
 	<table id="tablarriba">
 		<tr>
 			<td id="deslogeo">
-				<input type="button" value="Deslogearse" id="deslogear" >
+				<input type="button" value="Salir" id="deslogear" >
 			</td>
 
 			<td id="Bienvendio">
-				<h1>Bienvendio Administrador: </h1>
+				<h1>Bienvenido Administrador: </h1>
 			</td>
 		</tr>
 	</table>
@@ -51,7 +52,7 @@
 </nav>
 
 	<div class="vista">
-		<h1>Esta visualisado el Ciclo Escolar 2018-2019 </h1>
+		<h1>Esta visualizando el Ciclo Escolar 2018-2019 </h1>
 
 	</div>
 
@@ -63,10 +64,9 @@
 	 @yield('content')
 
 </body>
-
+  <script src="{{ asset('js/app.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js\calendario\fechado.js"></script>
   <script src="js\calendario\ocultadorAdmin.js"></script>
-		
 
 </html>

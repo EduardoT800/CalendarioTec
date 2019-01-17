@@ -11,17 +11,19 @@
 
 }
 
-
+.month {
+  display: inline-block;
+}
 
 .Fyear
 {
-	padding-left:  8%;
+	padding-left:  6em;
 
 }
 
 .Syear
 {
-	padding-left:  8%;
+	padding-left:  6em;
 	margin-bottom: 2rem;
 
 }
@@ -43,22 +45,26 @@
 	text-align: center;
 }
 
-.agosto 
+.dweek{
+  text-align: center;
+}
+
+.agosto
 {
 	display: inline-block;
 }
 
-.septiembre 
+.septiembre
 {
 	display: inline-block;
 }
 
-.octubre 
+.octubre
 {
 	display: inline-block;
 }
 
-.noviembre 
+.noviembre
 {
 	display: inline-block;
 }
@@ -106,7 +112,7 @@
 
 .agostos
 {
-	display: inline-block;	
+	display: inline-block;
 }
 
 .Fyear table
@@ -130,13 +136,9 @@
 {
 	border: solid 1px black;
 	width: 6rem;
-
-	
-
-
 }
 
-.mes_grande 
+.mes_grande
 {
 	padding-left:  4%;
 	margin-bottom: 2rem;
@@ -151,12 +153,12 @@
 
 }
 
-a 
+a
 {
 	text-decoration:none;
 
 }
-
+.mes_grande tr:not(.dweek),
 .mes_grande #week1, .mes_grande #week2, .mes_grande #week3, .mes_grande #week4, .mes_grande #week5
 {
      cursor:pointer;
@@ -168,3 +170,7 @@ a
 	 cursor:pointer;
 }
 
+.week td {
+  font-size: x-small;
+  text-align: center;
+}
