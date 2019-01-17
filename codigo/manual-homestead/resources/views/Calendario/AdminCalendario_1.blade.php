@@ -15,15 +15,17 @@ Admitrador de calendario Itescam
 					
 
 						<tr id="cEscolar">
-							<td>Ciclo Escolar N</td>
-							<td><input type="text" name="user" id="cEscolarN" value = "2018" readonly="readonly" onpaste="return false" required></td>
+							<td>Período: </td>
+							<td><input type="text" name="user" id="cEscolarN" value = "2018-2019" readonly="readonly" onpaste="return false" required></td>
 							<td><input type="button" value="-" onclick="menos()" id="menos" ></td>
 							<td><input type="button" value="+" onclick="mas()" id="mas" ></td>
 
 						</tr>
-				</table>
-
-                    <input type="button" value="Aplicar cambio de fecha" onclick="" id="changeDate" >
+        </table>
+        <div class="btn-group">
+          <input type="button" value="Crear" onclick="promptPeriodDates(document.querySelector('#cEscolarN').value);" id="changeDate">
+          <input type="button" value="Visualizar" style="display: block;" disabled>
+        </div>
 
 			</div>
 

@@ -21,11 +21,11 @@
 	border-radius: 15px 15px 15px 15px;
 	display: inline-block;
 	padding-right: 1%;
-	max-width: 27%;
-	margin-bottom: 2%;
+	max-width: 25%;
+	margin-bottom: 10rem;
 	margin-right: 1%;
-	
-	
+
+
 }
 
 .calendar
@@ -37,7 +37,7 @@
 	margin-bottom: 2%;
 	width: 70%;
 	max-width: 70%;
-	
+
 
 }
 

@@ -1,4 +1,4 @@
-@extends('Calendario.layout.master') 
+@extends('Calendario.layout.master')
 
 @section('title')
 Calendario Itescam
@@ -9,7 +9,7 @@ Calendario Itescam
 
  	<div class="tituloC">
      	<h1>Calendario Oficial Ciclo Escolar 2018-2019</h1>
-        
+
      </div>
 
      <div class="contenedorC">
@@ -17,14 +17,20 @@ Calendario Itescam
      		<table id="pictograma">
 
      			<div class="lista_CEscolar">
-     				
+
      			</div>
 	     			<tr id="lista">
-	     				<td id="icon_color"> <img src="imagenes\CalendarioIconos\inicio.png"></td>
+	     				<td id="icon_color">
+                <!-- <img src="imagenes\CalendarioIconos\inicio.png"> -->
+                <canvas id=icon_color width="26px" height="26px" style="border:3px solid #000000; background: #349b66;"></canvas>
+               </td>
 	     				<td >Inicio y fin de curso.</td>
 	     			</tr>
 	     			<tr id="lista">
-	     				<td id="icon_color"><img src="imagenes\CalendarioIconos\inhabiles.png"></td>
+	     				<td id="icon_color">
+               <!-- <img src="imagenes\CalendarioIconos\inhabiles.png"> -->
+               <canvas id=icon_color width="26px" height="26px" style="border:3px solid #000000; background: #fe0101;"></canvas>
+              </td>
 	     				<td>Inhábiles oficiales.</td>
 	     			</tr>
 	     			<tr id="lista">
@@ -51,7 +57,7 @@ Calendario Itescam
 	     				<td id="icon_color"><img src="imagenes\CalendarioIconos\srevaluacion.png"></td>
 	     				<td>2da Revaluación.</td>
 	     			</tr>
-	     			
+
 	     			<tr id="lista">
 	     				<td id="icon_color"><img src="imagenes\CalendarioIconos\ingles.png"></td>
 	     				<td>Examen diagnostico de inglés.</td>
@@ -83,7 +89,7 @@ Calendario Itescam
 
      			<tr id="lista_mes">
      				<th colspan="2" id="generalmes">General</th>
-     				
+
      			</tr>
 
      			<tr id="lista_mes">
@@ -132,7 +138,7 @@ Calendario Itescam
      				<td>Resultados de ingles</td>
      			</tr>
 
-     			
+
 
      			<tr id="lista_mes">
      				<td id="icon"><img src="imagenes\CalendarioIconos\viaje.png"></td>
@@ -141,7 +147,7 @@ Calendario Itescam
 
      			<tr id="micalendario">
      				<th colspan="2" id="generalmes">Mi calendario</th>
-     				
+
      			</tr>
 
      			<tr id="micalendario">
@@ -191,993 +197,64 @@ Calendario Itescam
 
      	<div class="calendar">
      		<div class="Fboton">
-     			<input type="button" value="2018" onclick="" id="firstyear" >
+     			<!-- <input type="button" value="2018" onclick="" id="firstyear" > -->
      		</div>
 
      		<div class="Fyear">
-     			<div class="agosto">
-     				<table>
-     					<tr>
-     						<th id="agostof" colspan="7">Agosto 2018</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
 
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="septiembre">
-     				<table>
-     					<tr>
-     						<th id="septiembre" colspan="7">Septiembre 2018</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="octubre">
-     				<table>
-     					<tr>
-     						<th id="octubre" colspan="7">Octubre 2018</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="noviembre">
-     				<table>
-     					<tr>
-     						<th id="noviembre" colspan="7">Noviembre 2018</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="diciembre">
-     				<table>
-     					<tr>
-     						<th id="diciembre" colspan="7">Diciembre 2018</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     		</div>
+         </div>
 
      		<div class="Sboton">
-     			<input type="button" value="2019" onclick="" id="secondyear" >
+     			<!-- <input type="button" value="2019" onclick="" id="secondyear" > -->
      		</div>
 
      		<div class="Syear">
-     			<div class="enero">
-     				<table>
-     					<tr>
-     						<th id="enero" colspan="7">Enero 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
 
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="febrero">
-     				<table>
-     					<tr>
-     						<th id="febrero" colspan="7">Febrero 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-     			
-
-     			<div class="marzo">
-     				<table>
-     					<tr>
-     						<th id="marzo" colspan="7">Marzo 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="abril">
-     				<table>
-     					<tr>
-     						<th id="abril" colspan="7">Abril 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="mayo">
-     				<table>
-     					<tr>
-     						<th id="mayo" colspan="7">Mayo 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="junio">
-     				<table>
-     					<tr>
-     						<th id="junio" colspan="7">Junio 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="julio">
-     				<table>
-     					<tr>
-     						<th id="julio" colspan="7">Julio 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-     			<div class="agostos">
-     				<table>
-     					<tr>
-     						<th id="agostos" colspan="7">Agosto 2019</th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
-
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     				
-     			</div>
-
-
-
-
-     		</div>
+         </div>
 
      		<div class="mes_grande">
-     			<table>
-     					<tr>
-     						<th id="gran_mes" colspan="7"> <P> Agosto 2018 </P> </th>
-     					</tr>
-     					<tr id="dweek">
-     						<td> D </td> 
-     						<td>L</td>
-     						<td>M</td>
-     						<td>M</td>
-     						<td>J</td>
-     						<td>V</td>
-     						<td>S</td>
-     					</tr>
 
-     					<tr id="week1">
-     						<td>  </td> 
-     						<td> <a href="https://www.itescam.edu.mx/portal/avisos.php?id=1610"><img src="imagenes\CalendarioIconos\credencial_big.png" id="Eventoone"></a><br>Acces Card Bel</td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week2">
-     						<td>  </td> 
-     						<td></td>
-     						<td><img src="imagenes\CalendarioIconos\cursos_gold.png" id="Eventoplus"><br> Adminitración de servidores...</td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week3">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week4">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     					<tr id="week5">
-     						<td>  </td> 
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     						<td></td>
-     					</tr>
-
-     				</table>
-     			
-     		</div>
-
-     		
+         </div>
 
      	</div>
-     	
-     </div>
 
+     </div>
+@endsection
+
+@section('Scripts')
+  <script src="{{ asset('js/calendario.js') }}"></script>
+  <script>
+    function toggleView(element){
+      // console.log("Hice esto LMAO");
+      element.id = "gran_mes";
+      let mesGrande = document.querySelector('.mes_grande');
+      mesGrande.innerHTML = element.parentNode.innerHTML;
+      mesGrande.querySelector('table').onclick = undefined;
+      mesGrande.querySelector('table th[colspan]').onclick = function(){
+        $('#lista_mes th').hide();
+        $('#lista_mes td').hide();
+        $('#lista th').show();
+        $('#lista td').show();
+        $('.Fyear').show();
+        $('.Fboton').show();
+        $('.Syear').show();
+        $('.Sboton').show();
+        $('.mes_grande').hide();
+      };
+      encabezado = capitalize(element.dataset.month);
+      $('#gran_mes th').text(encabezado);
+      $('#lista_mes th').show();
+      $('#lista_mes td').show();
+      $('#lista th').hide();
+      $('#lista td').hide();
+      $('.Fyear').hide();
+      $('.Fboton').hide();
+      $('.Syear').hide();
+      $('.Sboton').hide();
+      $('.mes_grande').show();
+    }
+    function capitalize(word) {
+      return word[0].toUpperCase() + word.slice(1);
+    }
+  </script>
 @endsection
