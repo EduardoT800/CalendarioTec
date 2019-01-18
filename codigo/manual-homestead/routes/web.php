@@ -138,3 +138,5 @@ Route::get('admin', function () {
     return view('Calendario/AdminCalendario_1');
 });
 
+Route::resource('periods', 'PeriodController');
+

@@ -1,7 +1,14 @@
 .contenedor
 {
 	background-color: #FFFFCD;
-	justify-content:center
+  justify-content:center;
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 27% 72%;
+  justify-content: space-evenly;
+  padding-left: 2em;
+  padding-top: 1em;
+  grid-column-gap: 20px;
 }
 
 .herramientas
@@ -11,12 +18,23 @@
 	border-radius: 15px 15px 15px 15px;
 	display: inline-block;
 	padding-right: 1%;
-	max-width: 27%;
-	min-width: 10rem;
+	max-width: 100%;
 	margin-bottom: 2%;
 	margin-right: 1%;
 	
 	
+}
+
+.Fyear {
+  padding-left: 3em !important;
+}
+
+.Syear {
+  padding-left: 3em !important;
+}
+
+.Fboton {
+  margin-top: 4em !important;
 }
 
 .calendario
@@ -26,8 +44,5 @@
 	border-radius: 15px 15px 15px 15px;
 	display: inline-block;
 	margin-bottom: 2%;
-	width: 70%;
-	max-width: 70%;
-	
-
+	width: 95%;
 }

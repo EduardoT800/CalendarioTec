@@ -24,7 +24,7 @@ Admitrador de calendario Itescam
         </table>
         <div class="btn-group">
           <input type="button" value="Crear" onclick="promptPeriodDates(document.querySelector('#cEscolarN').value);" id="changeDate">
-          <input type="button" value="Visualizar" style="display: block;" disabled>
+          <input type="button" id="view" value="Visualizar" style="display: block;" onclick="getPeriod(document.querySelector('#cEscolarN').value)" disabled>
         </div>
 
 			</div>
@@ -237,7 +237,7 @@ Admitrador de calendario Itescam
 				<input type="button" value="Cargar" onclick="" id="cargar" >
 				<br>
 				<br>
-				<input type="button" value="Guardar" onclick="" id="guardar" >
+				<input type="button" value="Guardar" onclick="savePeriod()" id="guardar" >
 				<br>
 				<br>
 				<input type="button" value="Publicar" onclick="" id="publicar" >
@@ -252,9 +252,31 @@ Admitrador de calendario Itescam
 
 				
 			
-		</div>
+    </div>
+    
+    <div class="calendario" style="margin-bottom: 25rem; min-height: 40rem;">
+     		<div class="Fboton">
+     			<!-- <input type="button" value="2018" onclick="" id="firstyear" > -->
+     		</div>
 
-		
+     		<div class="Fyear" style="width: 100%;">
+
+         </div>
+
+     		<div class="Sboton">
+     			<!-- <input type="button" value="2019" onclick="" id="secondyear" > -->
+     		</div>
+
+     		<div class="Syear">
+
+         </div>
+
+     		<div class="mes_grande">
+
+         </div>
+
+     	</div>
+
 		
 	</div>
 
@@ -263,4 +285,7 @@ Admitrador de calendario Itescam
 
 
 
+@endsection
+
+@section('Scripts')
 @endsection

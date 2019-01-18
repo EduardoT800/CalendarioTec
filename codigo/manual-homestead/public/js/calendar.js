@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -204,37 +204,68 @@ var ITESCAM;
         return ndate;
     }
     var Calendar = /** @class */ (function () {
-        function Calendar(startDate, endDate, type) {
-            if (typeof startDate !== "undefined" && typeof endDate !== "undefined" && typeof type !== "undefined") {
-                this.period = this.createPeriod(startDate, endDate, type);
+        // cycles?: Cycle[];
+        function Calendar(startDate, endDate) {
+            if (typeof startDate !== "undefined" && typeof endDate !== "undefined") {
+                this.period = this.createPeriod(startDate, endDate);
             }
             else {
                 this.period = this.emptyPeriod();
             }
         }
-        Calendar.prototype.createPeriod = function (startDate, endDate, type) {
+        /* Start Periods Methods */
+        Calendar.prototype.createPeriod = function (startDate, endDate) {
             var start = getCompleteMDate(startDate);
             var end = getCompleteMDate(endDate);
+            var name = startDate.year.value.toString() + endDate.year.value.toString();
             var period = {
                 startDate: start,
                 endDate: end,
-                years: this.getYears(start, end)
+                years: this.getYears(start, end),
+                name: name
             };
             return period;
         };
         Calendar.prototype.emptyPeriod = function () {
             var start = new MDate(1, 1, 2000);
             var end = new MDate(1, 1, 2000);
-            var type = '';
             var period = {
                 startDate: start,
                 endDate: end,
             };
             return period;
         };
-        Calendar.prototype.setCycle = function (cycle) {
-            this.period = cycle;
+        Calendar.prototype.setPeriod = function (period) {
+            this.period = period;
         };
+        /* End Period Methods*/
+        /* Start cycles Methods */
+        /**
+         * Genera los ciclos dentro del periodo dado la las fecha de final de N y la fecha de inicio de P.
+         * @param endDateN La fecha donde terminará el ciclo N
+         * @param startDateP la fecha en que iniciará el ciclo P
+         */
+        Calendar.prototype.generateCycles = function (endDateN, startDateP) {
+            var cycles = [];
+            var __startDateN = this.period.startDate, __startDateP = getCompleteMDate(startDateP);
+            var __endDateN = getCompleteMDate(endDateN), __endDateP = this.period.endDate;
+            cycles.push({
+                startDate: __startDateN,
+                endDate: __endDateN,
+                type: "N",
+                years: this.getYears(__startDateN, __endDateN),
+                name: this.period.name + 'N'
+            });
+            cycles.push({
+                startDate: __startDateP,
+                endDate: __endDateP,
+                type: "P",
+                years: this.getYears(__startDateN, __endDateN),
+                name: this.period.name + 'P'
+            });
+            this.period.cycles = cycles;
+        };
+        /* End Cycles Methods*/
         Calendar.prototype.getYears = function (startDate, endDate) {
             var years = [];
             var startYear = startDate.year.value, endYear = endDate.year.value;
@@ -459,7 +490,7 @@ var ITESCAM;
             for (var _a = 0, days_2 = days; _a < days_2.length; _a++) {
                 var day = days_2[_a];
                 response +=
-                    "<td id=\"" + (day.abbr + day.value) + "_" + day.year.value + "\">" + day.value + "</td>\n";
+                    "<td id=\"" + day.value + "_" + day.month.value + "_" + day.year.value + "\">" + day.value + "</td>\n";
             }
             if (isLastWeek && lastDay !== constDays[6].name) {
                 var currentDay = constDays.map(function (e) { return e.name; }).indexOf(lastDay);
@@ -481,6 +512,32 @@ var ITESCAM;
             }
             return text;
         };
+        /**
+         * Compares two dates, and returns numbers depending if `anotherDate` is lower, same of higher than `date`
+         * @param date The first date
+         * @param anotherDate The date to be compared
+         * @returns {number} `0` if they're the same, `1` if `date` is higher, and `-1` if `date` is lower.
+         */
+        Calendar.prototype.compareDates = function (date, anotherDate) {
+            var response = 0;
+            var fdate = new Date(date.year.value, date.month.value, date.day.value);
+            fdate.setHours(0, 0, 0, 0);
+            var sdate = new Date(anotherDate.year.value, anotherDate.month.value, anotherDate.day.value);
+            sdate.setHours(0, 0, 0, 0);
+            var first = fdate.getTime();
+            var second = sdate.getTime();
+            if (first === second) {
+                response = 0;
+            }
+            else if (first > second) {
+                response = 1;
+            }
+            else {
+                response = -1;
+            }
+            console.log(first, second, response);
+            return response;
+        };
         return Calendar;
     }());
     ITESCAM.Calendar = Calendar;
@@ -490,7 +547,7 @@ module.exports = ITESCAM;
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!****************************************!*\
   !*** multi ./resources/ts/calendar.ts ***!
   \****************************************/

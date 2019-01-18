@@ -3,12 +3,14 @@
 
 <html>
 <head>
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta charset="utf-8">
 	 <link href="css\calendariocss\adminmaster.css" rel="stylesheet" type="text/css">
 	 <link href="css\calendariocss\adminContenedor.css" rel="stylesheet" type="text/css">
 	 <link href="css\calendariocss\adminHerramientas.css" rel="stylesheet" type="text/css">
    <link href="css\calendariocss\calendarioAdmin.css" rel="stylesheet" type="text/css">
+   <link href="css\calendariocss\plantilla.css" rel="stylesheet" type="text/css">
+   <link href="css\calendariocss\calendario.css" rel="stylesheet" type="text/css">
    <!-- <link href="{{asset('css\app.css')}}" rel="stylesheet" type="text/css"> -->
 
 	 
@@ -59,14 +61,16 @@
 
 </header>
 
-<body>
+<body onload="getAllPeriods()">
 
 	 @yield('content')
 
 </body>
   <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/adminCalendar.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js\calendario\fechado.js"></script>
   <script src="js\calendario\ocultadorAdmin.js"></script>
+  @yield('Scripts')
 
 </html>
