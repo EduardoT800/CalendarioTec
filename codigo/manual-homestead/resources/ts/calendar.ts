@@ -121,12 +121,15 @@ namespace ITESCAM {
     endDate: MDate;
     type?: string;
     years?: Year[];
+    name?: string;
   }
 
   export interface Period {
     startDate: MDate;
     endDate: MDate;
+    cycles?: Cycle[];
     years?: Year[];
+    name?: string;
   }
 
   export function capitalize(word: string|undefined): string {
@@ -163,37 +166,67 @@ namespace ITESCAM {
 
   export class Calendar {
     period!: Period;
-    cycles?: Cycle[];
-    constructor(startDate?: MDate, endDate?: MDate, type?: string) {
-      if(typeof startDate !== "undefined" && typeof endDate !== "undefined" && typeof type !== "undefined"){
-        this.period = this.createPeriod(startDate, endDate, type);
+    // cycles?: Cycle[];
+    constructor(startDate?: MDate, endDate?: MDate) {
+      if(typeof startDate !== "undefined" && typeof endDate !== "undefined"){
+        this.period = this.createPeriod(startDate, endDate);
       } else {
         this.period = this.emptyPeriod();
       }
     }
-    createPeriod(startDate: MDate, endDate:MDate, type:string): Period {
+    /* Start Periods Methods */
+    createPeriod(startDate: MDate, endDate:MDate): Period {
       let start = getCompleteMDate(startDate);
       let end = getCompleteMDate(endDate);
+      let name = startDate.year.value.toString() + endDate.year.value.toString();
       let period: Period = {
         startDate: start,
         endDate: end,
-        years: this.getYears(start, end)
+        years: this.getYears(start, end),
+        name: name
       };
       return period;
     }
     emptyPeriod(): Period {
       let start = new MDate(1,1,2000);
       let end = new MDate(1,1,2000);
-      let type = '';
       let period: Period = {
         startDate: start,
         endDate: end,
       };
       return period;
     }
-    setCycle(cycle: Cycle): void {
-      this.period = cycle;
+    setPeriod(period: Period): void {
+      this.period = period;
     }
+    /* End Period Methods*/
+    /* Start cycles Methods */
+    /**
+     * Genera los ciclos dentro del periodo dado la las fecha de final de N y la fecha de inicio de P.
+     * @param endDateN La fecha donde terminará el ciclo N
+     * @param startDateP la fecha en que iniciará el ciclo P
+     */
+    generateCycles(endDateN: MDate, startDateP: MDate): void {
+      let cycles: Cycle[] = [];
+      let __startDateN = this.period.startDate, __startDateP = getCompleteMDate(startDateP);
+      let __endDateN = getCompleteMDate(endDateN), __endDateP = this.period.endDate;
+      cycles.push({
+        startDate: __startDateN,
+        endDate: __endDateN,
+        type: "N",
+        years: this.getYears(__startDateN, __endDateN),
+        name: this.period.name+'N'
+      });
+      cycles.push({
+        startDate: __startDateP,
+        endDate: __endDateP,
+        type: "P",
+        years: this.getYears(__startDateN, __endDateN),
+        name: this.period.name+'P'
+      });
+      this.period.cycles = cycles;
+    }
+    /* End Cycles Methods*/
     getYears(startDate: MDate, endDate: MDate): Year[] {
       let years: Year[] = [];
       let startYear = startDate.year.value, endYear = endDate.year.value;
@@ -419,7 +452,7 @@ namespace ITESCAM {
       }
       for (const day of days) {
         response += 
-        `<td id="${day.abbr!+day.value}_${day.year!.value}">${day.value}</td>\n`;
+        `<td id="${day.value}_${day.month!.value}_${day.year!.value}">${day.value}</td>\n`;
       }
       if(isLastWeek && lastDay !== constDays[6].name){
         let currentDay = constDays.map(e => e.name).indexOf(lastDay!);
@@ -439,6 +472,38 @@ namespace ITESCAM {
         +'</div>\n';
       }
       return text;
+    }
+    /**
+     * Compares two dates, and returns numbers depending if `anotherDate` is lower, same of higher than `date`
+     * @param date The first date
+     * @param anotherDate The date to be compared
+     * @returns {number} `0` if they're the same, `1` if `date` is higher, and `-1` if `date` is lower.
+     */
+    compareDates(date: MDate, anotherDate: MDate): number {
+      let response: number = 0;
+      let fdate = new Date(
+        date.year.value,
+        date.month.value,
+        date.day.value
+      );
+      fdate.setHours(0,0,0,0);
+      let sdate = new Date(
+        anotherDate.year.value,
+        anotherDate.month.value,
+        anotherDate.day.value
+      );
+      sdate.setHours(0,0,0,0);
+      let first = fdate.getTime();
+      let second = sdate.getTime();
+      if(first === second){
+        response = 0;
+      } else if(first > second){
+        response = 1; 
+      } else {
+        response = -1;
+      }
+      console.log(first, second, response);
+      return response;
     }
   }
 }

@@ -27,6 +27,7 @@ mix.webpackConfig({
 
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/calendario.js', 'public/js')
+   .js('resources/js/adminCalendar.js', 'public/js')
    .js('resources/ts/calendar.ts', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    ;

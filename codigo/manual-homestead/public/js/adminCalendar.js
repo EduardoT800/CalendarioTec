@@ -81,34 +81,23 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/calendario.js":
-/*!************************************!*\
-  !*** ./resources/js/calendario.js ***!
-  \************************************/
+/***/ "./resources/js/adminCalendar.js":
+/*!***************************************!*\
+  !*** ./resources/js/adminCalendar.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITESCAM = __webpack_require__(/*! ../ts/calendar */ "./resources/ts/calendar.ts");
 
-var iDate = ITESCAM.MDate;
 var Calendar = ITESCAM.Calendar;
-var startDate = new iDate(1, 8, 2018);
-var endDate = new iDate(31, 8, 2019);
-var calendar = new Calendar(startDate, endDate);
-calendar.generateCycles(new iDate(21, 1, 2019), new iDate(19, 2, 2019));
-window.calendar = calendar;
+window.ITESCAM = ITESCAM;
 window.Calendar = Calendar;
-var HTMLCalendar = document.querySelector('div.calendar');
-HTMLCalendar.querySelector('.Fboton').innerHTML = "<button type=\"button\" data-year=".concat(calendar.period.years[0].value, " id=\"firstyear\">").concat(calendar.period.years[0].value, "</button>");
-HTMLCalendar.querySelector('.Sboton').innerHTML = "<button type=\"button\" data-year=".concat(calendar.period.years[1].value, " id=\"secondyear\">").concat(calendar.period.years[1].value, "</button>");
-HTMLCalendar.querySelector('.Fyear').innerHTML = calendar.getAllMonthsHTML(calendar.period.years[0].months);
-HTMLCalendar.querySelector('.Syear').innerHTML = calendar.getAllMonthsHTML(calendar.period.years[1].months);
-document.querySelector(".tituloC h1").innerHTML = "Calendario Oficial Ciclo Escolar ".concat(startDate.year.value, "-").concat(endDate.year.value);
 
 /***/ }),
 
@@ -573,14 +562,14 @@ module.exports = ITESCAM;
 
 /***/ }),
 
-/***/ 1:
-/*!******************************************!*\
-  !*** multi ./resources/js/calendario.js ***!
-  \******************************************/
+/***/ 2:
+/*!*********************************************!*\
+  !*** multi ./resources/js/adminCalendar.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\victo\Documents\VSCodeProjects\CalendarioTec\codigo\manual-homestead\resources\js\calendario.js */"./resources/js/calendario.js");
+module.exports = __webpack_require__(/*! C:\Users\victo\Documents\VSCodeProjects\CalendarioTec\codigo\manual-homestead\resources\js\adminCalendar.js */"./resources/js/adminCalendar.js");
 
 
 /***/ })
